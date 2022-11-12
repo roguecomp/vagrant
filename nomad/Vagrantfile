@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
         vb.customize ["modifyvm", :id, "--cpus", 1]
       end
 
-      node.vm.synced_folder "./consul.config/", "/etc/consul/config"
+      node.vm.synced_folder "./config/consul/server", "/etc/consul/config"
       node.vm.synced_folder "./service", "/service/"
       node.vm.synced_folder "./bins", "/bins/"
     
@@ -85,8 +85,8 @@ Vagrant.configure("2") do |config|
         vb.customize ["modifyvm", :id, "--cpus", 1]
       end
      
-      node.vm.synced_folder "./consul.agent.config/", "/etc/consul/config"
-      node.vm.synced_folder "./nomad.config/", "/etc/nomad.d/config"
+      node.vm.synced_folder "./config/consul/client", "/etc/consul/config"
+      node.vm.synced_folder "./config/nomad/server", "/etc/nomad.d/config"
       node.vm.synced_folder "./service", "/service/"
       node.vm.synced_folder "./bins", "/bins/"
    
@@ -137,8 +137,8 @@ Vagrant.configure("2") do |config|
         vb.customize ["modifyvm", :id, "--cpus", 1]
       end
      
-      node.vm.synced_folder "./consul.agent.config/", "/etc/consul/config"
-      node.vm.synced_folder "./nomad.agent.config/", "/etc/nomad.d/config"
+      node.vm.synced_folder "./config/consul/client", "/etc/consul/config"
+      node.vm.synced_folder "./config/nomad/client", "/etc/nomad.d/config"
       node.vm.synced_folder "./service", "/service/"
       node.vm.synced_folder "./bins", "/bins/"
    

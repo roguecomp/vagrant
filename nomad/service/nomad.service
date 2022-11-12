@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash -c '/usr/bin/nomad agent -config=/etc/nomad.d/config/server.hcl'
+ExecStart=/bin/bash -c '/usr/bin/nomad agent -config=/etc/nomad.d/config/config.hcl'
 TimeoutStartSec=0
 
 [Install]
