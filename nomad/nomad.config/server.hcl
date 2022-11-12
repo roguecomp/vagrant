@@ -6,10 +6,10 @@ bind_addr = "{{ GetPrivateInterfaces | include \"network\" \"192.168.56.0/21\" |
 
 server {
   enabled          = true
-  bootstrap_expect = 3
+  bootstrap_expect = 1
 
-  server_join {
-    retry_join = ["192.168.56.20:4648"]
-  }
+  #server_join {
+  #  retry_join = ["192.168.56.20:4648"]
+  #}
 
 }
